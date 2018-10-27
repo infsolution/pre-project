@@ -1,9 +1,40 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
-	<title>Vision</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link rel="stylesheet" type="text/css" href="{% static 'vision/css/style.css' %}"-->
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<title >Vision</title>
 </head>
 <body>
-<h1>Your Vision</h1>
+	<h1>Your Vision</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 onmouseover="beepLink('beeplink')">LINKS</h2>
+				<audio id="beeplink" src="{% static 'vision/sound/beep.mp3' %}"></audio>
+				<a href="#" id="id-1" class="btn btn-primary btn-lg btn-block active" role="button" aria-pressed="true">
+				Primary link</a>
+
+
+			</div>
+			<div class="col-md-6">
+				<h2 onmouseover="beepLink('beepcont')">CONTEÚDO</h2>
+				<audio id="beepcont" src="{% static 'vision/sound/beepcontent.mp3' %}"></audio>
+				<a href="#" class="btn btn-success btn-lg btn-block active" role="button" aria-pressed="true">Success Content</a>				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script type="text/javascript" src="{% static 'vision/js/actions.js' %}"></script>
+	<script defer src="{% static 'fontawesome/js/fontawesome-all.min.js' %}"></script>
+	<script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
